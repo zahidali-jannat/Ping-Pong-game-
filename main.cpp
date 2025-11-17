@@ -15,22 +15,23 @@ int main() {
         
         //  ballX+=3; // This will increase the ball x position by 3 pixels at every loop which run 60 in one second 
         // but we want keyboard controls into the program 
-        if(IsKeyDown(KEY_RIGHT))
+        if(IsKeyDown(KEY_RIGHT) && ballX < 1000 - ballRadius)
         {
             ballX+=3;
         }
-        else if(IsKeyDown(KEY_LEFT))
+        else if(IsKeyDown(KEY_LEFT) && ballX < 1000 - ballRadius)
         {
             ballX-=3;
         }
-        else if(IsKeyDown(KEY_UP))
+        else if(IsKeyDown(KEY_UP) && ballX < 1000 - ballRadius)
         {
             ballY-=3;
         }
-        else if(IsKeyDown(KEY_DOWN))
+        else if(IsKeyDown(KEY_DOWN) && ballX < 1000 - ballRadius)
         {
             ballY+=3;
-        }
+        } 
+       
         
         BeginDrawing();
         ClearBackground(background);
